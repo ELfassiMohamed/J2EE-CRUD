@@ -11,19 +11,19 @@
 <h2>Hi! You can Register Here</h2>
 <div class="container" id="container">
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form method="post" action="Register.auth">
 			<h1>Create Account</h1>
-			<span>or use your email for registration</span>
-			<input type="text" placeholder="Name" />
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
-			<button>Sign Up</button>
+			<input type="text" name="fname" placeholder="First name" required/>
+			<input type="text" name="lname" placeholder="Last Name" required/>
+			<input type="email" name="email" placeholder="Email" required/>
+			<input type="password" name="pswd" placeholder="Password" required/>
+			<button type="submit">Sign Up</button>
 		</form>
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-right">
-				<h1>ALready have account!</h1>
+				<h1>Already have an account!</h1>
 				<a href="LoginPage.jsp"><h3>Go back</h3></a>
 			</div>
 		</div>

@@ -12,13 +12,7 @@ public class Test {
 		//Testing connection with DB
 		//System.out.println(dbTest.checkConnection());
 		UserDao userd = new UserDao(dbConnection.checkConnection());
-		User userT = new User();
-		userT.setFirst_name("amin3");
-		userT.setLast_name("amin3");
-		userT.setEmail("amin3@amin.com");
-		userT.setPassword("aqwzsx123456");
-		userT.setId(1);
-		userd.updateUser(userT);
+		userd.userLogIn("manal@mil.com", "aqw1256");
 
 	}
 

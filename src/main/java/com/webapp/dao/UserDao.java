@@ -27,6 +27,32 @@ public class UserDao {
 		this.con = con;
 	}
 	
+	public User userLogIn(String email, String password) {
+		String query = "select * from users where email=? and password=?";
+		User user = null;
+		try {
+			psmt = this.con.prepareStatement(query);
+			psmt.setString(1, email);
+			psmt.setString(2, password);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				user = new User();
+				user.setId(rs.getInt("id"));
+				user.setFirst_name(rs.getString("first_name"));
+				user.setLast_name(rs.getString("last_name"));
+				user.setIsdmin(false);
+				user.setEmail(rs.getString("email"));
+				user.setPassword(rs.getString("password"));
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return user;
+		
+	}
+	
 	public void insertUser(User user) {
 		try {
 			psmt = this.con.prepareStatement(INSERT_USER);

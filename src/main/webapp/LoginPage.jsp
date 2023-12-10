@@ -11,21 +11,20 @@
 <h2>Welcome Again</h2>
 <div class="container" id="container">
 	<div class="form-container sign-in-container">
-		<form action="#">
+		<form method="post" action="SignIn.auth">
 			<h1>Sign in</h1>
-			<span>or use your account</span>
-			<input type="email" placeholder="Email" />
-			<input type="password" placeholder="Password" />
+			<input type="email" name="email" placeholder="Email" required/>
+			<input type="password" name="pswd" placeholder="Password"  required/>
 			<a href="#">Forgot your password?</a>
-			<button>Sign In</button>
+			<button type="submit">Sign In</button>
 		</form>
 	</div>
 	<div class="overlay-container">
 		<div class="overlay">
 			<div class="overlay-panel overlay-right">
 				<h1>Don't Have Account!</h1>
-				<p>Register Now</p>
-				<a href="RegisterPage.jsp"class="ghost" id="signUp">Sign up now</a>
+				<h4>Register Now</h4>
+				<a href="RegisterPage.jsp"class="ghost" id="signUp"><h3>Sign up HERE</h3></a>
 				<!-- <button class="ghost" id="signUp">Sign Up</button> -->
 			</div>
 		</div>

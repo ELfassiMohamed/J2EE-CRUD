@@ -19,4 +19,14 @@
     <servlet-name>UserServlet</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Authentication</display-name>
+    <servlet-name>Authentication</servlet-name>
+    <servlet-class>com.webapp.controller.Authentication</servlet-class>
+  </servlet>
+ <!--  <servlet-mapping>
+    <servlet-name>Authentication</servlet-name>
+    <url-pattern>/Auth</url-pattern>
+  </servlet-mapping> -->
 </web-app>
