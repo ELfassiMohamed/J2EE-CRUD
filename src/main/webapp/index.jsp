@@ -16,6 +16,7 @@
 <style type="text/css"><%@include file="/Includes/styles.css"%></style>
 </head>
 <body>
+<%@ include file="Includes/NavBar.jsp" %>
 <div class="container-xl">
 	<div class="table-responsive">
 		<div class="table-wrapper">

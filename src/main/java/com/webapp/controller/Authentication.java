@@ -39,12 +39,8 @@ public class Authentication extends HttpServlet {
 					UserDao userdao = new UserDao(dbConnection.checkConnection());
 					User user = userdao.userLogIn(email, pswd);
 						if(user != null) {
-							//isAdmin not defined
-//							if(user.isIsdmin()) {
-//								response.sendRedirect("index.jsp");
-//							}else {
-//								response.sendRedirect("Welcome.jsp");
-//							}
+								request.getSession().setAttribute("auth-session", user);
+								response.sendRedirect("Welcome.jsp");
 						}else {
 							PrintWriter out = response.getWriter();
 							out.print("USER NOT FOUND");
@@ -84,6 +80,18 @@ public class Authentication extends HttpServlet {
 				 request.setAttribute("myMessage", "Rigesterd Successfully");
 				 request.getRequestDispatcher("Confirme.jsp").forward(request, response);
 				break;
+			}
+			case "/Logout.auth":{
+				if(request.getSession().getAttribute("userSession") != null) {
+					request.getSession().removeAttribute("userSession");
+					response.sendRedirect("LoginPage.jsp");
+				}else {
+					response.sendRedirect("LoginPage.jsp");
+				}
+				break;
+			}
+			default : {
+				request.getRequestDispatcher("LoginPage.jsp").forward(request, response);
 			}
 			}
 		}
