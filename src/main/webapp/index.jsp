@@ -6,9 +6,17 @@
 <%@ page import="com.webapp.connection.*" %>
 <%@ page import="com.webapp.dao.*" %>
 <%
+	//User Listes
 	UserDao allusers = new UserDao(dbConnection.checkConnection());
 	List<User> listOfUsers = allusers.showAllUser();
+	 
+	//Session
+	User userSession = (User) request.getSession().getAttribute("auth-session");
+	if(userSession != null){
+		request.setAttribute("userSession", userSession);
+	}
 %>
+
 <!DOCTYPE html>
 <html>
 <head>

@@ -60,6 +60,9 @@ public class UserServlet extends HttpServlet {
 			request.setAttribute("user_selected", userSelected);
 			 request.getRequestDispatcher("edit.jsp").forward(request, response);
 		}
+		default:{
+			 request.getRequestDispatcher("index.jsp").forward(request, response);
+		}
 		}
 	}
 
@@ -115,6 +118,9 @@ public class UserServlet extends HttpServlet {
 			 request.setAttribute("myMessage", "User Updated Successfully");
 			 request.getRequestDispatcher("hello.jsp").forward(request, response);
 			break;
+		}
+		default:{
+			 request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
 		}
 		

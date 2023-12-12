@@ -16,7 +16,7 @@
         </a>
         <ul class="dropdown-menu dropdown-menu-right" role="menu">
             <!-- <a class="dropdown-item" href="#">Edit Profile</a> -->
-            <a class="dropdown-item" href="#">Logout</a>
+            <a class="dropdown-item" href="Logout.auth">Logout</a>
         </ul>
     </div>
 </nav>
