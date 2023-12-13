@@ -13,7 +13,7 @@ import com.webapp.beans.User;
 import com.webapp.connection.dbConnection;
 import com.webapp.dao.UserDao;
 
-
+//@WebServlet("/")
 public class UserServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	//private UserDao userdao ;
@@ -40,7 +40,7 @@ public class UserServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			request.setAttribute("myMessage", "User deleted Successfully");
-			 request.getRequestDispatcher("hello.jsp").forward(request, response);
+			 request.getRequestDispatcher("msg.jsp").forward(request, response);
 			break;
 		
 		}
@@ -90,7 +90,7 @@ public class UserServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			 request.setAttribute("myMessage", "User Added Successfully");
-			 request.getRequestDispatcher("hello.jsp").forward(request, response);
+			 request.getRequestDispatcher("msg.jsp").forward(request, response);
 			break;
 		}
 		case "/update":
@@ -116,7 +116,7 @@ public class UserServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			 request.setAttribute("myMessage", "User Updated Successfully");
-			 request.getRequestDispatcher("hello.jsp").forward(request, response);
+			 request.getRequestDispatcher("msg.jsp").forward(request, response);
 			break;
 		}
 		default:{

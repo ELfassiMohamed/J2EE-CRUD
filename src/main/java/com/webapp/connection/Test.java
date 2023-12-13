@@ -8,11 +8,12 @@ import com.webapp.dao.UserDao;
 public class Test {
 
 	public static void main(String[] args) throws ClassNotFoundException, SQLException {
-		//dbConnection dbTest = new dbConnection();
+		dbConnection dbTest = new dbConnection();
 		//Testing connection with DB
-		//System.out.println(dbTest.checkConnection());
-		UserDao userd = new UserDao(dbConnection.checkConnection());
-		userd.userLogIn("manal@mil.com", "aqw1256");
+		System.out.println(dbTest.checkConnection());
+		System.out.println("helllo");
+		//UserDao userd = new UserDao(dbConnection.checkConnection());
+		//userd.userLogIn("manal@mil.com", "aqw1256");
 
 	}
 

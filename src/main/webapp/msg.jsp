@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Confirmation</title>
+<title>Message</title>
 <style type="text/css">
 .input {
 	
@@ -112,9 +113,10 @@ html::after {
 <body>
 <p>
 	<span class="input">
-		<c:out value="${requestScope.myMessage}" />=> go back :<a href="LoginPage.jsp">Sign In page</a>
+		<c:out value="${requestScope.myMessage}" />=> go back :<a href="index.jsp">Index Page</a>
 		<span></span>	
 	</span>
 </p>
+
 </body>
 </html>
