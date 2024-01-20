@@ -31,6 +31,7 @@ public class Authentication extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 			String action = request.getServletPath();
+		//Login or Sigh in not working efficiently!
 			switch(action) {
 			case "/SignIn.auth":{
 				String email = request.getParameter("email");
