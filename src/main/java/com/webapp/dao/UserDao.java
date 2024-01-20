@@ -26,7 +26,8 @@ public class UserDao {
 		super();
 		this.con = con;
 	}
-	
+
+	//Not working efficiently
 	public User userLogIn(String email, String password) {
 		String query = "select * from users where email=? and password=?";
 		User user = null;
